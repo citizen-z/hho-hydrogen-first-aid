@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /_db_generated/
+Disallow: /ssfm/
+Disallow: /stats/
+Disallow: /stat/
+Disallow: /stat.html
+Disallow: /blog/
+Disallow:/web/
+Disallow:/bio/
+
